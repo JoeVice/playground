@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Daniel Will Powerwoche JavaScript/CSS3/HTML5 - Nürnberg</title>
+    <meta charset="UTF-8" />
+    <link href="src/css/mainStyle.css" rel="stylesheet">
+    <script src="src/js/jquery/jquery-3.3.1.min.js"></script>
+    <script src="src/js/main.js" async></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            let pages = {
+                "home": {
+                    "url": "index.html",
+                    "text": "home"
+                },
+                "about": {
+                    "url": "about.html",
+                    "text": "über mich"
+                },
+                "contact": {
+                    "url": "contact.html",
+                    "text": "kontakt"
+                }
+            }
+            for (page in pages) {
+                createNavigationLink(pages[page].url, pages[page].text);
+            }
+
+
+            /*
+            let calc = function (num1, num2, calcType) {
+            if (calcType === "add") {
+                return num1 + num2; 
+            } else if (calcType === "mult") {
+                return num1 * num2; 
+            }
+            }
+
+            calc (2, 3, 'add');
+            console.log ( calc(2, 3, 'add'));
+            */
+
+            // callback -> Funktionsliterale
+            // abstrahiert die obere funktion und macht sie einfacher wartbar
+            let add = function (a, b) {
+                return a + b;
+            }
+
+            let multiply = function (a, b) {
+                return a * b;
+            }
+
+            let calc = function (num1, num2, callback) {
+                return callback(num1, num2);
+            }
+
+            console.log(calc(2, 3, multiply));
+            eval("console.log('hans wurst')");
+            console.log(encodeURI("hans\wurst"));
+            var uri = "my test.asp?name=ståle&car=saab";
+            var res = encodeURI(uri);
+            console.log(res);
+
+            function Flugzeug(Model,PS,Pilot) {
+                this.Model = Model;
+                this.PS = PS;
+                this.Pilot = Pilot;
+            }
+
+            let Boing = new Flugzeug("777","1500");
+            console.log(Boing);
+
+            function Person(Vorname,Nachname) {
+                this.Vorname = Vorname;
+                this.Nachname = Nachname;
+            }
+
+            let Jogi = new Person("Joachim","Löw");
+            let fightJet = new Flugzeug("MIG","3000",Jogi);
+            console.log(fightJet.Pilot.Vorname);
+
+            let zitat = "Sein oder nicht sein";
+            console.log(zitat.slice(5,9));
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        Wrapper
+        <div id="banner">
+            Banner
+        </div>
+        <div id="navbar">
+            <nav id="mainNav">
+                <ul id="navList">
+                </ul>
+
+            </nav>
+        </div>
+        <div id="content">
+            <article id="contentArticle">
+                <header id="mainHeader">
+                    <h1> yo </h1>
+                </header>
+                <section id="infoSection">
+                    Info-Sektor
+                </section>
+            </article>
+        </div>
+    </div>
+</body>
+
+</html>

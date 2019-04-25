@@ -1,0 +1,10 @@
+{
+    "home": {
+        "url": "index.html",
+        "text": "home"
+    },
+    "about": {
+        "url": "about.html",
+        "text": "über mich"
+    }
+}

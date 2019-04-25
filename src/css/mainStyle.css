@@ -1,0 +1,57 @@
+/* DIVS */
+
+#wrapper {
+    background-color: aliceblue;
+    border: 1px dotted red;
+    padding: 10px;
+}
+
+#wrapper a {
+    text-decoration: none;
+}
+
+#wrapper a:hover {
+    color: orange;
+}
+
+#banner {
+    border: 3px dotted red;
+    height: 100px;
+    padding: 10px;
+    background-color: rgba(220, 220, 220, 0.3);
+}
+
+#navbar {
+    text-align: center;
+}
+
+/* OTHER (HTML5-SEMANTIK) */
+
+#mainNav {
+    display: inline;
+    justify-content: center;
+}
+
+#navList {
+    list-style-type: none;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(255, 165, 0, 0.05);
+    text-transform: uppercase;
+}
+
+#navItem {
+    display: inline;
+    padding: 10px;
+}
+
+#navItem a {
+    color: grey;
+}
+
+#navItem :hover {
+    background-color: rgba(255, 165, 0, 0.15);
+    color: black;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
